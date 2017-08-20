@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test1"> 
+   <groups>
+	   <define name="groups"> 
+	      <include name="group1"  />   
+	      <include name="group2"  />  
+	   </define>  
+	   <run>  
+	      <include name="group1" />   
+	      <exclude name="group2" />   
+	   </run>	   
+   </groups> 
+   <packages>
+     <package name="Day05"/>   
+   </packages>      
+    
+  </test> <!-- Test -->
+  
+   <test name="Test2"> 
+   <parameter name="s" value="b"/>  
+	 <classes>
+	     <class name="Day05.Class1"/>
+	     <class name="Day06.Class3">
+	        <methods>
+	           <include name="method5" />
+	        </methods>
+	     </class>
+	 </classes>    
+     
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
